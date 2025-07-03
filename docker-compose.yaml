@@ -1,0 +1,20 @@
+services:   
+  motionbert:
+    container_name: motionbert
+    image: pytorch/pytorch:1.11.0-cuda11.3-cudnn8-devel
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ~/workspace/:/workspace
+    
+    runtime: nvidia
+    restart: unless-stopped
+
+    environment:
+      PYTHONIOENCODING: utf-8
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: all
+
+    stdin_open: true
+    tty: true
+    privileged: true

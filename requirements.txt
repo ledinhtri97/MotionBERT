@@ -10,3 +10,11 @@ roma
 ipdb
 pytorch-metric-learning                         # For one-shot action recognition
 smplx[all]                                      # For mesh recovery
+pycocotools
+setuptools
+halpecocotools
+munkres
+natsort
+terminaltables
+timm==0.1.20
+visdom
